@@ -31,7 +31,7 @@ namespace ConsoleRobot
         public YourRobot()
         {
 
-            robotName = "Smash";
+            robotName = "Smasher";
             studentNames = new string[] { "Reece", "Jason" };
             attack = 10;
             defense = 10;
@@ -78,6 +78,67 @@ namespace ConsoleRobot
 
 
         }
+
+
+        public static double explosiveDiahrea(double damage)
+        {
+            YourRobot robot = new YourRobot();
+
+            ActionResult result = new ActionResult();
+
+            result.ActionName = "Explosive Diahrea";
+            result.AnimationName = "Punch";
+
+            damage = .8 * robot.attack + .2 * robot.defense;
+
+            //return damage;
+            return result;
+        }
+
+        public static faceSlap()
+        {
+
+            YourRobot robot = new YourRobot();
+            ActionResult result = new ActionResult();
+            
+            result.ActionName = "Face Slap";
+            result.AnimationName = "Punch";
+
+            double damage = .1 * robot.attack + .9 * robot.defense;
+                        
+            return result;
+        }
+
+
+        public static PerformAction()
+        {
+            Random random = new Random();
+
+            // Generate a random number between 1 and 4
+            int randomNumber = random.Next(1, 5);
+
+            switch (randomNumber)
+            {
+                case 1:
+                    explosiveDiahrea(5);
+                    break;
+                case 2:
+                    faceSlap(5);
+                    break ;
+                default:
+                    break;
+
+            }
+            
+                     
+            ActionResult performAction = new ActionResult(explosiveDiahrea(5));
+
+
+
+            return performAction.ActionName();
+
+        }
+
 
 
     }
