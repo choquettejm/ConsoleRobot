@@ -15,6 +15,8 @@ using ConsoleRobot;
             YourRobot robot = new YourRobot();
         
             Console.WriteLine(robot.GetMaxHeath());
+
+            Console.WriteLine(robot.robotName);
             Console.WriteLine(robot.GetAllStats());
                 
         }

@@ -31,7 +31,7 @@ namespace ConsoleRobot
         public YourRobot()
         {
 
-            robotName = "test";
+            robotName = "Smash";
             studentNames = new string[] { "Reece", "Jason" };
             attack = 10;
             defense = 10;
@@ -65,7 +65,7 @@ namespace ConsoleRobot
             return 10 * constitution;
         }
 
-        public void TakeDamage()
+        public double TakeDamage()
         {
             double damageDealt = 0;
             double newHealth = 0;
@@ -73,7 +73,8 @@ namespace ConsoleRobot
             double currentHealth = health;
 
             damageDealt = incomingDamage - (defense / 100 * incomingDamage);
-            newHealth = currentHealth - damageDealt;
+            
+            return newHealth = currentHealth - damageDealt;
 
 
         }
