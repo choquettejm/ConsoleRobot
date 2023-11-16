@@ -53,6 +53,24 @@ public class YourRobot
 
     }
 
+    public double GetMaxHeath()
+    {
+        return health;
+    }
+
+    public void TakeDamage()
+    {
+        double damageDealt = 0;
+        double newHealth = 0;
+        double incomingDamage = 0;
+        double currentHealth = health;
+
+        damageDealt = incomingDamage - (defense / 100 * incomingDamage);
+        newHealth = currentHealth - damageDealt;
+           
+
+    }
+
 
 }
 
